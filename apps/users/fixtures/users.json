@@ -1,0 +1,44 @@
+[
+    {
+      "model": "users.User",
+      "pk": 1,
+      "fields": {
+        "updated": "2021-07-25T19:23:30.865733-03:00",
+        "date_joined": "2021-07-25T19:23:30.865733-03:00",
+        "username": "jf_superuser",
+        "first_name": "Juan",
+        "last_name": "Fite",
+        "email": "juan_superuser@fake.com",
+        "password": "pbkdf2_sha256$150000$syMpASXOIkGp$HUptpfwwgHIu7+Am84azIhdTY6iclKCGnVdHkguQJVw=",
+        "is_superuser": true
+      }
+    },
+    {
+        "model": "users.User",
+        "pk": 2,
+        "fields": {
+          "updated": "2021-07-25T19:23:30.865733-03:00",
+          "date_joined": "2021-07-25T19:23:30.865733-03:00",
+          "username": "jf_staff",
+          "first_name": "Juan",
+          "last_name": "Fite",
+          "email": "juan_staff@fake.com",
+          "password": "pbkdf2_sha256$150000$syMpASXOIkGp$HUptpfwwgHIu7+Am84azIhdTY6iclKCGnVdHkguQJVw=",
+          "is_staff": true
+        }
+      },
+      {
+        "model": "users.User",
+        "pk": 3,
+        "fields": {
+          "updated": "2021-07-25T19:23:30.865733-03:00",
+          "date_joined": "2021-07-25T19:23:30.865733-03:00",
+          "username": "jf_normal",
+          "first_name": "Juan",
+          "last_name": "Fite",
+          "email": "juan_normal@fake.com",
+          "password": "pbkdf2_sha256$150000$syMpASXOIkGp$HUptpfwwgHIu7+Am84azIhdTY6iclKCGnVdHkguQJVw="
+        }
+      }
+
+  ]

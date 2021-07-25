@@ -1,12 +1,6 @@
 ENVIRONMENT=local
 USE_DOCKER=yes
 IPYTHONDIR=/app/.ipython
-# DJANGO_ALLOWED_HOSTS=127.0.0.1,0.0.0.0,localhost
-# DJANGO_DEBUG=True
-# DJANGO_DEBUG=True
-# USE_TZ=True
-# LANGUAGE_CODE=es-ar
-# DJANGO_SETTINGS_MODULE=config.settings.local
 DJANGO_ALLOWED_HOSTS=127.0.0.1,0.0.0.0,localhost
 
 
