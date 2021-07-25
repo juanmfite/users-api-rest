@@ -5,6 +5,7 @@ pytz==2018.9  # https://github.com/stub42/pytz
 django==2.2.1  # https://www.djangoproject.com/
 django-environ==0.4.5  # https://github.com/joke2k/django-environ
 django-filter==2.1.0
+django-allauth==0.39.1  # https://github.com/pennersr/django-allauth
 
 django-cors-headers==3.0.2  # https://github.com/ottoyiu/django-cors-headers
 
