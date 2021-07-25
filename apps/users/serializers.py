@@ -1,8 +1,9 @@
-from rest_framework import serializers
 from django.contrib.auth.models import Group
 
-from apps.users.models import User
+from rest_framework import serializers
+
 from apps.users.exceptions import BaseAPIException
+from apps.users.models import User
 from apps.users.utils import CheckPassword
 
 
@@ -52,7 +53,7 @@ class UserCreateSerializer(UserBaseSerializer):
         extra_kwargs = {
             'password': {'write_only': True},
         }
-    
+
     read_only_fields = (
         'id',
         'updated',
@@ -173,6 +174,7 @@ class UserDetailMinimalSerializer(UserBaseSerializer):
         'last_name',
     )
 
+
 class UserDetailSerializer(UserBaseSerializer):
     """
     Serializer for User detail with full information.
@@ -190,7 +192,7 @@ class UserDetailSerializer(UserBaseSerializer):
             'email',
             'password',
         ]
-    
+
     read_only_fields = (
         'id',
         'username',
@@ -209,6 +211,6 @@ class UserDetailSerializer(UserBaseSerializer):
 
     def get_created(self, obj):
         return obj.date_joined
-    
+
     def get_password(self, obj):
         return '********'

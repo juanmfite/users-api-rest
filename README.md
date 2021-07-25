@@ -10,7 +10,7 @@ This is a full API Rest with some rules depending on User level.
 - Docker, docker-compose
 - Postgres
 
-#### How to deploy on local
+### How to deploy on local 🚀
 Copy local enviroments to **.env**
 ```sh
 cp envs/local .env
@@ -38,7 +38,7 @@ You can enter the commands inside the container, using
 docker-compose run --rm --service-port django bash 
 ```
 
-#### Test
+### Test
 To run the unit test you have to use **pytest**
 ```sh
 docker-compose run --rm --service-port django bash 
