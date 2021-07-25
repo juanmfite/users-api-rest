@@ -20,6 +20,7 @@ oauthlib==3.1.0
 requests==2.21.0
 python-dateutil==2.8.0 # https://github.com/dateutil/dateutil
 ipython==7.25.0
+isort==5.9.2
 
 # PostgreSQL
 psycopg2-binary==2.9.1

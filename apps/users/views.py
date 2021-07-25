@@ -1,21 +1,16 @@
-from rest_framework import (
-    authentication,
-    permissions,
-    status,
-    viewsets,
-)
+from rest_framework import authentication, permissions, status, viewsets
 from rest_framework.response import Response
 
 from apps.external_services.subscription_service import SubscriptionService
 from apps.users.models import User
+from apps.users.permissions import UserCustomPermission
 from apps.users.serializers import (
     UserCreateSerializer,
-    UserDetailSerializer,
     UserDetailMinimalSerializer,
+    UserDetailSerializer,
     UserPartialUpdateSerializer,
-    UserUpdateSerializer
+    UserUpdateSerializer,
 )
-from apps.users.permissions import UserCustomPermission
 
 
 class UserViewSet(viewsets.ModelViewSet):

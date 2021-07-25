@@ -1,8 +1,8 @@
 import json
-import requests
 
 from django.conf import settings
 
+import requests
 
 __all__ = ['SubscriptionService']
 
@@ -38,4 +38,4 @@ class SubscriptionServiceMock():
 
 
 if settings.SUBSCRIPTION_SERVICE_DEBUG:
-    SubscriptionService = SubscriptionServiceMock
+    SubscriptionService = SubscriptionServiceMock # NOQA
