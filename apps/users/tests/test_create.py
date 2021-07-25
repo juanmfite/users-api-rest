@@ -157,6 +157,7 @@ class UserCreateTestCase(UserViewSetTestCase):
     
     def test_create_not_permission(self):
         self.user = UsersFakeFactory.make_user()
+        # import pdb; pdb.set_trace()
         self.client.force_authenticate(user=self.user)
 
         data = {

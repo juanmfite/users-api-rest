@@ -13,6 +13,8 @@ class UsersFakeFactory(object):
         "first_name": "John",
         "last_name": "Doe",
         "email": "johndoe@ine.test",
+        "is_superuser": False,
+        "is_staff": False
     }
 
     superuser_user = {
@@ -28,7 +30,7 @@ class UsersFakeFactory(object):
         "first_name": "John",
         "last_name": "Doe",
         "email": "johndoe_staff@ine.test",
-        "is_superuser": True
+        "is_staff": True
     }
 
     @classmethod
