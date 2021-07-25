@@ -23,10 +23,7 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = False
 
-SECRET_KEY = env.str(
-    "DJANGO_SECRET_KEY",
-    default="aU9jKiofFwB55jtmPfb8M568amNBDvD79gxkK1cu6wS1zROPk5lmSRfPQbbbKS0Z",
-)
+SECRET_KEY = "sarasa"
 
 # DATABASES
 # ------------------------------------------------------------------------------
