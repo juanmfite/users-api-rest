@@ -33,3 +33,4 @@ httpretty==0.9.6  # https://github.com/gabrielfalcao/HTTPretty
 pretend==1.0.9  # https://github.com/alex/pretend
 mixer==6.1.3 # https://github.com/klen/mixero
 pytest-env==0.6.2 # https://github.com/MobileDynasty/pytest-env
+pytest-django==4.4.0
