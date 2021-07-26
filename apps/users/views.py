@@ -35,6 +35,14 @@ class UserViewSet(viewsets.ModelViewSet):
         elif self.action == 'retrieve-full':
             return UserDetailSerializer
 
+    def list(self, request, *args, **kwargs):
+        return Response(
+            {
+                'detail': 'Method not allowed.'
+            },
+            status=status.HTTP_405_METHOD_NOT_ALLOWED
+        )
+
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()
 
