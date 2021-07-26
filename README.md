@@ -41,5 +41,5 @@ docker-compose run --rm --service-port django bash
 ### Test
 To run the unit test you have to use **pytest**
 ```sh
-docker-compose run --rm --service-port django bash 
+docker-compose run django pytest --cov apps/ 
 ```
