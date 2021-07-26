@@ -1,5 +1,6 @@
 from rest_framework import authentication, permissions, status, viewsets
 from rest_framework.response import Response
+from rest_framework_simplejwt.authentication import JWTAuthentication
 
 from apps.external_services.subscription_service import SubscriptionService
 from apps.users.models import User
@@ -17,7 +18,7 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.order_by('-id')
     permission_classes = (permissions.IsAuthenticated, UserCustomPermission)
     authentication_classes = [
-        authentication.BasicAuthentication,
+        JWTAuthentication,
         authentication.SessionAuthentication,
         authentication.TokenAuthentication,
     ]
@@ -33,8 +34,6 @@ class UserViewSet(viewsets.ModelViewSet):
             return UserDetailMinimalSerializer
         elif self.action == 'retrieve-full':
             return UserDetailSerializer
-        elif self.action == 'delete':
-            pass
 
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()
