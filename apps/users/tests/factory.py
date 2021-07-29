@@ -1,5 +1,3 @@
-from decimal import Decimal
-
 from mixer.backend.django import Mixer
 
 
@@ -39,7 +37,7 @@ class UsersFakeFactory(object):
         params.update(kwargs)
         instance = Mixer().blend('users.User', **params)
         return instance
-    
+
     @classmethod
     def make_super_user(cls, *args, **kwargs):
         params = cls.superuser_user.copy()
@@ -48,7 +46,7 @@ class UsersFakeFactory(object):
         instance.set_password('SuperPass.1')
         instance.save()
         return instance
-    
+
     @classmethod
     def make_staff_user(cls, *args, **kwargs):
         params = cls.staff_user.copy()
@@ -57,3 +55,18 @@ class UsersFakeFactory(object):
         instance.set_password('SuperPass.1')
         instance.save()
         return instance
+
+    @classmethod
+    def base_data_create_test(cls):
+        return {
+            "username": "johndoe-test-creation",
+            "first_name": "John",
+            "last_name": "Doe",
+            "email": "johndoe-test-creation@ine.test",
+            "password": "Supernotupper1.",
+            "repeat_password": "Supernotupper1.",
+            "groups": [
+                "sales",
+                "support",
+            ]
+        }
